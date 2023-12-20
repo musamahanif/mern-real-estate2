@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose, { Mongoose } from "mongoose";
 
 
 
@@ -19,3 +19,7 @@ const userSchema= new mongoose.Schema({
         
     }
 }, {timestaps:true})
+
+const User= mongoose.model('User', userSchema);
+
+export default User;
